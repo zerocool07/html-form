@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Html form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      margin: 20px 20px;
+    }
+
+    div {
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 8px 8px;
+      border-radius: 2px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 10px 10px;
+    }
+    fieldset{
+      padding: 15px 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Form</h1>
+
+  <form action="#" method="GET">
+    <fieldset>
+      <legend>Personal information</legend>
+      <div>
+        <p> <label for="name">Your name:</label></p>
+        <input type="text" name="name" id="name" placeholder="Your name">
+      </div>
+      <div>
+        <p> <label for="surname">Your surname:</label></p>
+        <input type="text" name="surname" id="surname" placeholder="Your surname">
+      </div>
+      <div>
+        <p> <label for="pass">Your password:</label></p>
+        <input type="password" name="password" id="pass" placeholder="Your password:">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Other information</legend>
+      <div>
+        <p>Your gender: </p>
+        <label><input type="radio" name="gender" value="male"> Male </label>
+        &nbsp;
+        <label><input type="radio" name="gender" value="female"> Female</label>
+      </div>
+      <div>
+        <p>Your car or cars: </p>
+        <label><input type="checkbox" name="merc" value="merc"> Mercedes </label>
+        &nbsp;
+        <label><input type="checkbox" name="bmw" value="bmw"> BMW</label>
+        &nbsp;
+        <label><input type="checkbox" name="ford" value="ford"> Ford</label>
+        &nbsp;
+        <label><input type="checkbox" name="opel" value="opel"> Opel</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>About car</legend>
+      <label for="cars">Choose a car:</label>
+      <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+        <option value="saab">Saab</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Datalist element</legend>
+      <input list="browsers">
+      <datalist id="browsers">
+        <option value="IE">
+        <option value="Firefox">
+        <option value="Google Chrome">
+        <option value="Opera">
+      </datalist>
+    </fieldset>
+    <div>
+      <input type="color">
+      <br>
+
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+      
+      <br>
+      
+      <label for="vol">Volume(Between 0 and 50): </label>
+      <input type="range" id="vol" min="0" max="50" step="1">
+
+      <br>
+
+      <label for="search">Search Google:</label>
+      <input type="search" id="search" name="gsearch">
+
+      <br>
+      <label for="phone">Enter your phone number</label>
+      <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-12-123">
+      
+      <br>
+
+      <label for="time">Select your time</label>
+      <input type="time" id="time" name="time">   
+      <br>
+
+      <input type="submit" value="Enter">
+    </div>
+  </form>
+</body>
+
+</html>
